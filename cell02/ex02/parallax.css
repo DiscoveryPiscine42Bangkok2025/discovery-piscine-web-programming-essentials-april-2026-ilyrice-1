@@ -1,0 +1,50 @@
+/* Ensure the page takes up the full window */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* The Parallax Container */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; /* Makes each image take up the full screen */
+}
+
+/* Background Images - Use your own links here! */
+.img1 {
+    background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b");
+}
+
+.img2 {
+    background-image: url("https://images.unsplash.com/photo-1472214103451-9374bd1c798e");
+}
+
+/* The Middle Black Block */
+.black-block {
+    color: white;
+    background-color: black;
+    padding: 100px 50px;
+    text-align: center;
+}
+
+/* Centering the text on the images */
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
