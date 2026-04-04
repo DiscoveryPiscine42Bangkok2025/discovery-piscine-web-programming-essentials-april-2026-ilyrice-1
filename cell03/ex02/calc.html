@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's over 9000</title>
+    <style>
+        /* Basic styling to center the calculator and make it look clean */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        input[type="text"], select, input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" id="leftMember" placeholder="Left number">
+        
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        
+        <input type="text" id="rightMember" placeholder="Right number">
+        
+        <input type="submit" value="Try me!" id="calculateBtn">
+    </div>
+
+    <script>
+        // Set up the annoying alert that pops up every 30 seconds (30000 milliseconds)
+        setInterval(() => {
+            alert("Please, use me...");
+        }, 30000);
+
+        // Get the calculate button and add the click event listener
+        document.getElementById('calculateBtn').addEventListener('click', () => {
+            const leftInput = document.getElementById('leftMember').value;
+            const rightInput = document.getElementById('rightMember').value;
+            const operator = document.getElementById('operator').value;
+
+            // Helper function to check if a string is purely a positive integer (contains only digits)
+            const isPositiveInteger = (str) => {
+                // Returns true only if the string contains 1 or more digits and nothing else
+                return /^\d+$/.test(str);
+            };
+
+            // 1. Validate inputs (must be positive integers >= 0)
+            if (!isPositiveInteger(leftInput) || !isPositiveInteger(rightInput)) {
+                alert("Error :(");
+                console.log("Error :(");
+                return;
+            }
+
+            // Convert valid string inputs to numbers
+            const leftNum = parseInt(leftInput, 10);
+            const rightNum = parseInt(rightInput, 10);
+            let result;
+
+            // 2. Check for division/modulo by zero
+            if ((operator === '/' || operator === '%') && rightNum === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            // 3. Perform the calculation
+            switch (operator) {
+                case '+':
+                    result = leftNum + rightNum;
+                    break;
+                case '-':
+                    result = leftNum - rightNum;
+                    break;
+                case '*':
+                    result = leftNum * rightNum;
+                    break;
+                case '/':
+                    result = leftNum / rightNum;
+                    break;
+                case '%':
+                    result = leftNum % rightNum;
+                    break;
+            }
+
+            // 4. Output the result
+            alert(result);
+            console.log(result);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lucky Number jQuery</title>
+    </head>
+<body>
+    <button id="luckyBtn">Check my luck</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Use the jQuery click handler instead of onclick
+            $('#luckyBtn').on('click', function() {
+                // Your logic to display the lucky number or modal
+                alert("Your lucky number is: " + Math.floor(Math.random() * 100));
+            });
+        });
+    </script>
+</body>
+</html>

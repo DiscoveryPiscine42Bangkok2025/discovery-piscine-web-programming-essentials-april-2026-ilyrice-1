@@ -1,0 +1,15 @@
+body {
+    /* Give the page an initial background color (like the green in the example) */
+    background-color: #2b6a43; 
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #ccc;
+}
