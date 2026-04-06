@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator jQuery</title>
+    </head>
+<body>
+    <input type="text" id="leftNum">
+    
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    
+    <input type="text" id="rightNum">
+    
+    <input type="submit" id="calcBtn" value="Try me!">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Use jQuery to handle the click event
+            $('#calcBtn').click(function() {
+                // Get values using the jQuery .val() method
+                const left = $('#leftNum').val();
+                const right = $('#rightNum').val();
+                const op = $('#operator').val();
+
+                // Logic check: ensure positive integers as per original rules
+                if (isPositiveInteger(left) && isPositiveInteger(right)) {
+                    calculate(Number(left), Number(right), op);
+                } else {
+                    alert("Error :(");
+                }
+            });
+
+            function calculate(a, b, op) {
+                // Handle division by zero check
+                if ((op === '/' || op === '%') && b === 0) {
+                    console.log("It’s over 9000!");
+                    alert("It’s over 9000!");
+                    return;
+                }
+
+                let result;
+                if (op === '+') result = a + b;
+                if (op === '-') result = a - b;
+                if (op === '*') result = a * b;
+                if (op === '/') result = a / b;
+                if (op === '%') result = a % b;
+
+                console.log(result);
+                alert(result);
+            }
+
+            function isPositiveInteger(str) {
+                return /^\d+$/.test(str);
+            }
+
+            // Set the 30-second reminder alert as per Cell 3-2 rules
+            setInterval(function() {
+                alert("Please, use me...");
+            }, 30000);
+        });
+    </script>
+</body>
+</html>

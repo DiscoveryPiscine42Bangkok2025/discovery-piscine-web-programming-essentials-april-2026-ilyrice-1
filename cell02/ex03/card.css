@@ -1,0 +1,47 @@
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centers the card vertically */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* The shadow effect */
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    padding-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0; /* Rounds only top corners of image */
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 90%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.7;
+}

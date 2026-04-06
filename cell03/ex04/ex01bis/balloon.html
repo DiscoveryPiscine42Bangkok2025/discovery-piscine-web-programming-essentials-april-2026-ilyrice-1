@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explode this balloon</title>
+    <style>
+        /* Center the balloon on the screen for better visibility */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Initial balloon styles */
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%; /* Makes the div a perfect circle */
+            cursor: pointer;
+            transition: background-color 0.2s; /* Smooth color transition */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="balloon"></div>
+
+    <script>
+        const balloon = document.getElementById('balloon');
+        
+        // Initial state variables
+        let size = 200;
+        const colors = ['red', 'green', 'blue'];
+        let colorIndex = 0; // Starts at 0 ('red')
+
+        // Function to handle clicking on the balloon
+        balloon.addEventListener('click', () => {
+            // Increase size by 10px
+            size += 10;
+            
+            // Check if it should explode
+            if (size > 420) {
+                size = 200;
+            }
+
+            // Cycle color forward (red -> green -> blue)
+            colorIndex = (colorIndex + 1) % colors.length;
+            
+            // Apply new styles
+            updateBalloon();
+        });
+
+        // Function to handle the mouse leaving the balloon area
+        balloon.addEventListener('mouseleave', () => {
+            // Shrink size by 5px
+            size -= 5;
+            
+            // Prevent going smaller than original size
+            if (size < 200) {
+                size = 200;
+            }
+
+            // Cycle color backward (red -> blue -> green)
+            // We add colors.length before modulo to handle negative values safely
+            colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+            
+            // Apply new styles
+            updateBalloon();
+        });
+
+        // Helper function to apply the changes to the DOM element
+        function updateBalloon() {
+            balloon.style.width = size + 'px';
+            balloon.style.height = size + 'px';
+            balloon.style.backgroundColor = colors[colorIndex];
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid black;
+    text-align: center;
+    font-size: 5vw;
+}
+
+.cell-one {
+    background-color: lightcoral;
+}
+
+.cell-two {
+    background-color: lightseagreen;
+}
