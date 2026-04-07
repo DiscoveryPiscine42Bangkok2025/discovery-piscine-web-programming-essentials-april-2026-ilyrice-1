@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ner | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #ff00d4; /* Custom accent for Ner */ }
+        .navbar-brand { color: var(--accent) !important; }
+        .section-title::after { background: var(--accent); }
+        .text-info { color: var(--accent) !important; }
+        .skill-card { border-left-color: var(--accent); }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="80">
+    
+    <!-- Swappable Content -->
+    <div id="app-wrap">
+        <!-- Sticky Navbar -->
+        <nav id="navbar-main" class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">NR.</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#showcase">Showcase</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- About Section -->
+        <section id="about" class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center order-lg-2">
+                    <img src="assets/67.png" alt="Ner" class="profile-img fade-in">
+                </div>
+                <div class="col-lg-6 fade-in order-lg-1" style="animation-delay: 0.2s;">
+                    <h2 class="section-title">About Me</h2>
+                    <h1 class="display-4 fw-bold">Preeladol Tamtanad</h1>
+                    <h1 class="display-4 fw-bold">Ner</h1>
+                    <p class="text-info lead mb-4">Hardware Configuration</p>
+                    <p>Motivated student with a strong interest in artificial intelligence and technology. I am passionate about understanding how AI can be applied to real-life situations and create meaningful impact.
+                        I enjoy learning new things, taking on challenges, and continuously improving myself. I am adaptable, open to new ideas, and willing to step out of my comfort zone to grow.
+                        While I am still working on my communication skills, I am friendly, easy to collaborate with, and always ready to learn from others.</p>
+                    <div class="mt-4">
+                        <h5 class="fw-bold"><i class="fas fa-palette me-2 text-info"></i> Education</h5>
+                        <p class="mb-1 text-secondary">Princess sirindhon's college</p>
+                        <p class="text-secondary small">SMTE</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showcase Section -->
+        <section id="showcase" class="bg-dark">
+            <div class="container">
+                <h2 class="section-title">Showcase</h2>
+                <div class="row g-4 mt-2">
+                    <div class="col-md-4">
+                        <div class="skill-card fade-in">
+                            <h4 class="fw-bold"><i class="fas fa-gear me-2 text-info"></i> Workshop</h4>
+                            <p class="text-secondary mb-1"><b>KMUTT</b></p>
+                            <p class="text-secondary small mb-3">
+                                เข้าร่วมกิจกรรม workshop computer engineering<br>
+                                10 - 12 Oct 2025
+                            </p>
+                            <img src="assets/nig-1.png" alt="APITech Internship Certificate" class="img-fluid rounded shadow-sm border border-light-subtle">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="skill-card fade-in" style="animation-delay: 0.2s;">
+                            <h4 class="fw-bold"><i class="fas fa-atom me-2 text-info"></i> Science Camp</h4>
+                            <p class="text-secondary mb-1"><b>Princess sirindhon's college</b></p>
+                            <p class="text-secondary small">
+                                ค่ายวิทยาศาสตร์<br>
+                                28 Apr 2024
+                            </p>
+                            <img src="assets/nigger.png" alt="Science Camp Certificate" class="img-fluid rounded shadow-sm border border-light-subtle">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="skill-card fade-in" style="animation-delay: 0.4s;">
+                            <h4 class="fw-bold"><i class="fas fa-language me-2 text-info"></i> Science Camp</h4>
+                            <p class="text-secondary mb-1"><b>Princess sirindhon's college</b></p>
+                            <p class="text-secondary small mb-3">
+                                STME Science Camp<br>
+                                25-28 Apr 2025
+                            </p>
+                            <img src="assets/camp.png" alt="NMK English Camp" class="img-fluid rounded shadow-sm border border-light-subtle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container text-center">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="lead mb-5 text-secondary">Let's larp beautifuly together.</p>
+                <div class="social-links mb-5">
+                    <a href="https://github.com/Ner2008" target="_blank"><i class="fab fa-github"></i></a>
+                
+                    <a href="https://instagram.com/preeladol.t" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <hr class="opacity-10">
+                <p class="mt-4 text-secondary small">&copy; 2026 Ner. Built for discovery_piscine/rush.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Persistent Music Player -->
+    <div id="youtube-player"></div>
+    <div class="music-toggle" id="musicToggle">
+        <i class="fas fa-play" id="musicIcon"></i>
+    </div>
+    <div class="music-info">Yungtarr - Jupiter</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="music-player.js"></script>
+</body>
+</html>
